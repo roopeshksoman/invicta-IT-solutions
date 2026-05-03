@@ -1,0 +1,920 @@
+html{
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b0f19;
+    color: #fff;
+    scroll-behavior: smooth;
+
+    height: 100%;
+    margin: 0;
+}
+
+/* HEADER */
+.contact-spacing{
+    padding-left: 20px;
+}
+.search-spacing{
+    padding-right: 20px;
+}
+
+.top-header {
+    background: url("../picsIcons/wpBG2.png");
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 0;
+}
+
+/* CONTACT FIX */
+.contact-info {
+    white-space: nowrap; /* prevent breaking */
+}
+
+/* SEARCH BOX */
+.search-box input {
+    border-radius: 20px;
+    border: none;
+    padding: 5px 15px;
+    width: 200px;
+}
+.search-box-bg{
+    background-color: #025d70;
+}
+
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .top-header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .contact-info {
+        white-space: normal;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+}
+
+/*TEXT ANIMATIONS AND EFFECTS
+======================================*/
+/* Gradient TEXT*/
+.gradient-text {
+    background: linear-gradient(90deg,#f4f7f7,#0d6efd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-text1 {
+    background: linear-gradient(90deg,#0d6efd,#fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-text2 {
+    background: linear-gradient(90deg,#fff,#0d6efd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Animations*/
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 1s ease forwards;
+}
+
+.slide-up.delay {
+    animation-delay: 0.4s;
+}
+
+@keyframes SlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDown 0.8s ease forwards;
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideLeft 0.8s ease forwards;
+}
+
+@keyframes slideLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideRight 0.8s ease forwards;
+}
+
+@keyframes slideRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+/* Navbar */
+.navbar {
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #0dcaf0 !important;
+}
+
+/* Hero */
+
+.hero {
+    height: auto;
+    padding: 40px 0;
+    display: flex;
+    align-items: flex-start; /* pushes text up */
+    justify-content: center;
+    text-align: center;
+
+    background: url("../picsIcons/wpBG2.png");
+    background-size: cover;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+}
+/*words zoom effect*/
+.zoom-line {
+    display: inline-block;
+    transition: all 0.4s ease;
+    animation: fadeUp 1s ease;
+}
+
+.zoom-line:hover {
+    transform: scale(1.08);
+}
+
+/* Entry animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}/*Letter zoom effect*/
+
+
+/*.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: url("picsIcons/wpBG2.png");
+    /*background: radial-gradient(circle at top,#0b1e39,#000);
+}*/
+
+
+/* Buttons */
+.btn-main {
+    background: linear-gradient(45deg,#cce1e5,#0d6efd);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Cards */
+.card-dark {
+    background: #121826;
+    border-radius: 15px;
+    padding: 30px;
+    transition: 0.4s;
+}
+
+.card-dark:hover {
+    transform: translateY(-15px) scale(1.03);
+}
+
+/* WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+/* Section spacing */
+section {
+    padding: 80px 0;
+}
+
+
+
+.custom-navbar {
+    background: url("../picsIcons/wpBG1.png"); /* your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-brand img {
+    height: 100px;   /* adjust size */
+    width: auto;
+    display: block; /* removes extra spacing */
+}
+
+.iTTs-logo {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 25px;
+    padding: 5px;
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+}
+
+.iTTs-logo img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+/*Logo animation ended here*/
+.logo-padding{
+    padding-bottom: 30px;
+}
+
+.common-bg {
+    width: 100%;
+    background-image: url("../picsIcons/wpBG1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.big-bg {
+    
+    width: auto;
+    background: url("../picsIcons/wpBG2.png"); /* your background image */
+    background-size: cover;
+    background-position: center;
+}
+.heading-font1 {
+    font-size: clamp(28px, 5vw, 50px);
+}
+
+.para-font1 {
+    font-size: clamp(20px, 3vw, 30px);
+}
+
+.para-font2 {
+    font-size: clamp(15px, 3vw, 20px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    color: #fff;
+}
+
+.font-style {
+    font-size: clamp(14px, 2vw, 25px);
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    padding: 7px 15px;
+    border-radius: 90%;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+    color: white;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* makes icon visible on dark bg */
+}
+
+.hyperlink-control {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.para-head{
+    font-size: clamp(14px, 2vw, 25px);
+    color:aqua;
+
+}
+
+
+
+/*Why choose CSS */
+.why-us {    
+    padding: 80px 0;
+}
+
+/* Card Style */
+.why-card {
+    background: url("../picsIcons/wpBG1.png");
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Icon */
+.why-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Hover Effect */
+.why-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* Glow Border on Hover */
+.why-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 2px;
+    background: linear-gradient(45deg,#0dcaf0,#0d6efd);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.why-card:hover::before {
+    opacity: 1;
+}
+
+/* Text */
+.why-card h4 {
+    margin-top: 10px;
+    color: #0dcaf0;
+}
+
+.why-card p {
+    font-size: 14px;
+    color: #ccc;
+}
+/*----------*/
+
+/*Services CSS*/
+.services-section {
+    padding: 100px 0;
+    padding-top: 30px !important;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(90deg,#0dcaf0,#0d6efd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Glass Card */
+.service-card {
+    background: url("../picsIcons/wpBG1.png");
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+/* Icon */
+.service-card .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #0dcaf0;
+}
+
+/* Hover Effects */
+.service-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(13,110,253,0.3);
+}
+
+/* Animated Border Glow */
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(45deg,#0dcaf0,#0d6efd,#0dcaf0);
+    background-size: 300% 300%;
+    animation: glow 4s linear infinite;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {background-position: 0%;}
+    100% {background-position: 300%;}
+}
+
+/* Text */
+.service-card h4 {
+    margin-top: 10px;
+    font-weight: 800;
+    color: rgb(223, 212, 245);
+}
+
+.service-card p {
+    font-size: 17px;
+    color: #ccc;
+}
+
+
+#request-form textarea {
+    min-height: 30vh;   /* base height */
+    resize: none;
+}
+.address {
+    color: aliceblue;
+    font-size: clamp(14px, 2.5vw, 20px);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+/* Contact page style----------------*/
+.contact-section {
+    padding: 20px;
+}
+
+/* LEFT CARD 
+
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+@media (max-width: 576px) {
+    .contact-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+}
+
+.contact-card h4 {
+    font-size: clamp(18px, 2.5vw, 30px);
+}
+
+.contact-card p {
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+/* RIGHT FORM */
+.form-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* INPUTS */
+.form-control {
+    border-radius: 10px;
+}
+
+/* TEXTAREA */
+#request-form textarea {
+    min-height: 30%;
+    resize: none;
+    overflow: hidden;
+}
+
+/* BUTTON */
+.btn-main {
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    transform: scale(1.02);
+}
+
+/*Social media page*/
+/* ===== Simple Service List ===== */
+
+.simple-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.list-item {
+    padding: 20px 20px 20px 25px;
+    border-left: 4px solid #0dcaf0;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.list-item h4 {
+    margin-bottom: 8px;
+    color: #0dcaf0;
+    font-weight: 600;
+}
+
+.list-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Subtle hover */
+.list-item:hover {
+    background: rgba(13,110,253,0.08);
+    transform: translateX(5px);
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+    .hero {
+        padding: 25px 0;
+    }
+}
+
+
+
+/* Image column size */
+/* Image container */
+.list-img {
+    flex: 0 0 30%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Image */
+.list-img img {
+    width: 30%;
+    height: 50%;
+    object-fit: contain;   /* 👈 KEY CHANGE */
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+}
+
+/* Force horizontal layout */
+.list-item.with-image {
+    display: flex;
+    flex-direction: row;   /* ensures side-by-side */
+    align-items: center;
+    gap: 20px;
+}
+
+/* Fading overlay (works everywhere) */
+.list-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+        to right,
+        rgba(11,15,25,1) 0%,
+        rgba(11,15,25,0) 20%,
+        rgba(11,15,25,0) 80%,
+        rgba(11,15,25,1) 100%
+    );
+    pointer-events: none;
+}
+/*Social media page css end here*/
+
+
+
+
+
+.text-justify {
+  text-align: justify;
+}
+
+
+/*----------------*/
+
+.footer {
+    background: linear-gradient(90deg,#000,#0b1e39);
+    color: #aaa;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1; /* pushes footer down */
+}
+
+
+
+
+
+
+/* ===== Social Section ===== */
+.social-section {
+    background: linear-gradient(45deg, #014856, #041b3e);
+    border-radius: 30px;
+    padding: 30px 10px;
+     /*background: url("../picsIcons/wpBG1.png");
+    background-repeat: no-repeat;*/
+    
+}
+
+/* Wrapper */
+.social-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Image */
+.social-image img {
+    width: 320px;
+    height: 320px;
+    object-fit:cover;
+    border-radius: 15px;
+}
+
+/* Content */
+.social-content {
+    max-width: 800px;
+}
+
+.social-content h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #2c1c0f;
+}
+
+.social-content p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #3b2a1a;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .social-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .social-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*Govt support page*/
+/* ===== Govt Timeline Style ===== */
+
+.govt-timeline {
+    position: relative;
+    margin-top: 40px;
+    padding-left: 30px;
+}
+
+/* Vertical line */
+.govt-timeline::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(#0dcaf0, #0d6efd);
+}
+
+/* Item */
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Icon circle */
+.timeline-icon {
+    position: absolute;
+    left: -2px;
+    background: #0b0f19;
+    border: 3px solid #0dcaf0;
+    color: #0dcaf0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* Content */
+.timeline-content {
+    background: rgba(255,255,255,0.03);
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.timeline-content:hover {
+    background: rgba(13,110,253,0.08);
+    transform: translateX(5px);
+}
+
+/* Text */
+.timeline-content h4 {
+    color: #0dcaf0;
+    margin-bottom: 6px;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .govt-timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+}
+
+/*end Govt support page*/
+
+/*Office doc*/
+/* ===== ALTERNATE CARD STYLE ===== */
+
+.alt-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.03);
+    transition: 0.3s;
+}
+
+/* Reverse layout */
+.alt-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ICON */
+.alt-icon {
+    font-size: 50px;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* CONTENT */
+.alt-content h4 {
+    color: #0dcaf0;
+    margin-bottom: 10px;
+}
+
+.alt-content p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* HOVER */
+.alt-card:hover {
+    background: rgba(13,110,253,0.08);
+    transform: translateY(-5px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .alt-card,
+    .alt-card.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+/* Wrapper */
+.office-docs-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 80%;
+    margin: auto;
+}
+/* Image */
+.office-docs-image{
+    width: 320px;
+    height: 320px;
+    object-fit:cover;
+    border-radius: 15px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .office-docs-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .office-docs-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*end*/
